@@ -1,0 +1,363 @@
+/* ========================================
+   NETNÚCLEO - LOGIN
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul-principal: #003bd1;
+    --azul-secundario: #00abe5;
+    --laranja: #f28c28;
+
+    --branco: #ffffff;
+
+    --texto: #333333;
+    --texto-claro: #777777;
+
+    --borda: #dddddd;
+}
+
+
+/* ========================================
+   BODY
+======================================== */
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: var(--texto);
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.login-container {
+    width: 92%;
+    max-width: 1200px;
+
+    height: 640px;
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+
+    background-color: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   ÁREA DA IMAGEM
+======================================== */
+
+.login-image {
+    width: 50%;
+    height: 100%;
+
+    background-image: url("../img/login-bg.png");
+
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-color: #ffffff;
+}
+
+
+/* ========================================
+   ÁREA DO LOGIN
+======================================== */
+
+.login-content {
+    width: 50%;
+    height: 100%;
+
+    background-color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* ========================================
+   CARTÃO
+======================================== */
+
+.login-card {
+    width: 320px;
+
+    padding: 26px;
+
+    background-color: #ffffff;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+/* ========================================
+   TÍTULO
+======================================== */
+
+.login-card h1 {
+    font-size: 25px;
+
+    font-weight: 700;
+
+    margin-bottom: 6px;
+
+    color: var(--texto);
+}
+
+
+.login-description {
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    color: var(--texto-claro);
+
+    margin-bottom: 24px;
+}
+
+
+/* ========================================
+   CAMPOS
+======================================== */
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+
+.form-group label {
+    display: block;
+
+    font-size: 11px;
+
+    margin-bottom: 6px;
+
+    color: var(--texto);
+}
+
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    height: 38px;
+
+    padding: 0 11px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 5px;
+
+    background-color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 11px;
+
+    color: var(--texto);
+
+    outline: none;
+}
+
+
+.form-group input::placeholder {
+    color: #aaaaaa;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--azul-principal);
+}
+
+
+/* ========================================
+   SENHA
+======================================== */
+
+.password {
+    position: relative;
+}
+
+
+.password input {
+    padding-right: 35px;
+}
+
+
+.eye {
+    position: absolute;
+
+    right: 10px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    color: #888888;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   OPÇÕES
+======================================== */
+
+.login-options {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 2px;
+
+    margin-bottom: 20px;
+
+    font-size: 10px;
+}
+
+
+.login-options label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.login-options input {
+    width: 12px;
+
+    height: 12px;
+
+    accent-color: var(--azul-principal);
+}
+
+
+.login-options a {
+    color: var(--texto);
+
+    text-decoration: none;
+}
+
+
+.login-options a:hover {
+    color: var(--azul-principal);
+}
+
+
+/* ========================================
+   BOTÃO
+======================================== */
+
+.btn-login {
+    width: 100%;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: var(--azul-principal);
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.btn-login:hover {
+    background-color: #002fa8;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 800px) {
+
+    .login-container {
+        width: 95%;
+
+        height: auto;
+
+        min-height: 600px;
+    }
+
+    .login-image {
+        display: none;
+    }
+
+    .login-content {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .login-container {
+        width: 100%;
+
+        height: 100vh;
+
+        top: 0;
+        left: 0;
+
+        transform: none;
+    }
+
+    .login-card {
+        border: none;
+
+        box-shadow: none;
+    }
+}

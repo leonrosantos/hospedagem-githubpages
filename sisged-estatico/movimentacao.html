@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Movimentação administrativa do NetNúcleo">
+    <meta name="author" content="Bárbara Rodrigues">
+    <meta name="language" content="pt-br">
+    <meta name="robots" content="index, follow">
+    <meta name="color-scheme" content="dark light">
+
+    <title>Movimentação | SISGED</title>
+
+    <link rel="stylesheet" href="css/movimentacao.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="icon" type="image/png" href="img/SENAI_logo_2024.png">
+
+    <link rel="stylesheet" href="css/sem-js.css">
+    <style>
+body:has(#menu-aula:checked) label[for="menu-aula"] { background:#e7f0ff; color:#003bd1; font-weight:600; border-left:3px solid #003bd1; padding-left:7px; }
+body:has(#menu-aula:checked) label[for="menu-aula"] span { color:#003bd1; }
+body:has(#menu-aula:checked) #painel-aula { display:block; }
+body:has(#menu-atividade:checked) label[for="menu-atividade"] { background:#e7f0ff; color:#003bd1; font-weight:600; border-left:3px solid #003bd1; padding-left:7px; }
+body:has(#menu-atividade:checked) label[for="menu-atividade"] span { color:#003bd1; }
+body:has(#menu-atividade:checked) #painel-atividade { display:block; }
+body:has(#menu-programacao:checked) label[for="menu-programacao"] { background:#e7f0ff; color:#003bd1; font-weight:600; border-left:3px solid #003bd1; padding-left:7px; }
+body:has(#menu-programacao:checked) label[for="menu-programacao"] span { color:#003bd1; }
+body:has(#menu-programacao:checked) #painel-programacao { display:block; }
+body:has(#menu-ocorrencia:checked) label[for="menu-ocorrencia"] { background:#e7f0ff; color:#003bd1; font-weight:600; border-left:3px solid #003bd1; padding-left:7px; }
+body:has(#menu-ocorrencia:checked) label[for="menu-ocorrencia"] span { color:#003bd1; }
+body:has(#menu-ocorrencia:checked) #painel-ocorrencia { display:block; }
+    </style>
+</head>
+
+<body>
+
+        <!-- CABEÇALHO -->
+    <header class="topbar">
+
+        <section class="logo-image">
+
+        <!-- Espaço reservado para imagem/identidade visual -->
+            <img src="img/logo_senai.png" alt="logo" class="logo" >
+
+        </section>
+
+        <a href="dashboard.html" class="logo-link">
+
+            <strong>SISGED</strong>
+
+        </a>
+
+
+        <nav class="top-menu">
+
+            <a href="consultas.html">
+                Consulta
+            </a>
+
+            <a href="relatorios.html">
+                Relatório
+            </a>
+
+            <a href="perfil.html">
+                 Perfil
+            </a>
+
+            <a href="cadastro.html" >
+                Cadastro
+            </a>
+                
+            <a href="movimentacao.html" class="active">
+                Movimentação
+            </a>
+
+            <a href="utilitarios.html">
+                 Utilitários
+            </a>
+
+        </nav>
+
+
+        <div class="user-area">
+
+            <div class="user-info">
+
+                <strong>Usuário</strong>
+
+                <span>Administrador</span>
+
+            </div>
+
+            <div class="user-icon">
+                ♙
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <div class="page-container">
+
+
+        <!-- MENU LATERAL -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-title">
+                MOVIMENTAÇÃO
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <input type="radio" name="menu" id="menu-aula" class="menu-radio">
+<label for="menu-aula" class="mov-menu"><span>▣</span> Lançamento de Aula</label>
+
+
+                <input type="radio" name="menu" id="menu-atividade" class="menu-radio">
+<label for="menu-atividade" class="mov-menu"><span>▤</span> Lançamento de Atividades</label>
+
+
+                <input type="radio" name="menu" id="menu-programacao" class="menu-radio">
+<label for="menu-programacao" class="mov-menu"><span>▦</span> Programação de Turmas</label>
+
+
+                <input type="radio" name="menu" id="menu-ocorrencia" class="menu-radio">
+<label for="menu-ocorrencia" class="mov-menu"><span>⚠</span> Ocorrências</label>
+
+            </nav>
+
+
+            <div class="sidebar-divider"></div>
+
+
+
+        </aside>
+
+
+
+        <!-- CONTEÚDO -->
+
+        <main class="main-content">
+
+
+            <section class="page-header">
+
+                <span class="breadcrumb">
+                    Início › Movimentação
+                </span>
+
+                <h1>
+                    Movimentação
+                </h1>
+
+                <p>
+                    Selecione uma opção no menu lateral
+                    para realizar um lançamento ou cadastro.
+                </p>
+
+            </section>
+
+
+
+            <!-- ÁREA ÚNICA -->
+
+            <section
+                class="movimentacao-container"
+                id="areaMovimentacao">
+
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">
+                        +
+                    </div>
+
+                    <h3>
+                        Selecione uma movimentação
+                    </h3>
+
+                    <p>
+                        Escolha uma opção no menu lateral
+                        para começar.
+                    </p>
+
+                </div>
+
+            
+<div class="painel" id="painel-aula"><div class="movimentacao-header"><h2>Lançamento de Aula</h2></div><p class="aviso-sem-js">Esta versão não usa JavaScript, por isso este formulário é só ilustrativo: não salva dados.</p><form class="movimentacao-form"><div class="form-group"><label>Turma</label><input type="text" disabled></div><div class="form-group"><label>Data</label><input type="date" disabled></div><div class="form-group"><label>Conteúdo ministrado</label><input type="text" disabled></div><button type="button" class="btn-lancar" disabled>Lançar</button></form><table class="movimentacao-tabela"><thead><tr><th>Turma</th><th>Data</th><th>Conteúdo ministrado</th></tr></thead><tbody><tr><td colspan="3">Nenhum lançamento realizado.</td></tr></tbody></table></div>
+<div class="painel" id="painel-atividade"><div class="movimentacao-header"><h2>Lançamento de Atividades</h2></div><p class="aviso-sem-js">Esta versão não usa JavaScript, por isso este formulário é só ilustrativo: não salva dados.</p><form class="movimentacao-form"><div class="form-group"><label>Turma</label><input type="text" disabled></div><div class="form-group"><label>Atividade</label><input type="text" disabled></div><div class="form-group"><label>Data</label><input type="date" disabled></div><button type="button" class="btn-lancar" disabled>Lançar</button></form><table class="movimentacao-tabela"><thead><tr><th>Turma</th><th>Atividade</th><th>Data</th></tr></thead><tbody><tr><td colspan="3">Nenhum lançamento realizado.</td></tr></tbody></table></div>
+<div class="painel" id="painel-programacao"><div class="movimentacao-header"><h2>Programação de Turmas</h2></div><p class="aviso-sem-js">Esta versão não usa JavaScript, por isso este formulário é só ilustrativo: não salva dados.</p><form class="movimentacao-form"><div class="form-group"><label>Turma</label><input type="text" disabled></div><div class="form-group"><label>Data de início</label><input type="date" disabled></div><div class="form-group"><label>Turno</label><input type="text" disabled></div><button type="button" class="btn-lancar" disabled>Lançar</button></form><table class="movimentacao-tabela"><thead><tr><th>Turma</th><th>Data de início</th><th>Turno</th></tr></thead><tbody><tr><td colspan="3">Nenhum lançamento realizado.</td></tr></tbody></table></div>
+<div class="painel" id="painel-ocorrencia"><div class="movimentacao-header"><h2>Ocorrências</h2></div><p class="aviso-sem-js">Esta versão não usa JavaScript, por isso este formulário é só ilustrativo: não salva dados.</p><form class="movimentacao-form"><div class="form-group"><label>Turma</label><input type="text" disabled></div><div class="form-group"><label>Data</label><input type="date" disabled></div><div class="form-group"><label>Descrição</label><input type="text" disabled></div><button type="button" class="btn-lancar" disabled>Lançar</button></form><table class="movimentacao-tabela"><thead><tr><th>Turma</th><th>Data</th><th>Descrição</th></tr></thead><tbody><tr><td colspan="3">Nenhum lançamento realizado.</td></tr></tbody></table></div></section>
+
+        </main>
+
+    </div>
+
+    </body>
+
+</html>
