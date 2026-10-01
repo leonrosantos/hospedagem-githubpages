@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de login do sistema NetNúcleo">
+    <meta name="author" content="Bárbara Rodrigues">
+    <meta name="language" content="pt-br">
+    <meta name="robots" content="index, follow">
+    <meta name="color-scheme" content="dark light">
+
+     <link rel="stylesheet" href="/sisged-api/public/css/login.css">
+     <link rel="icon" type="image/png" href="/sisged-api/public/img/favicon.jpg">
+   
+    <title>Login | SISGED</title>
+</head>
+<body>
+     <main class="login-container">
+
+        <!-- LADO ESQUERDO -->
+        <section class="login-image">
+
+            <!-- Espaço reservado para imagem/identidade visual -->
+             <img src="/login-bg.png">
+
+
+        </section>
+
+
+        <!-- LADO DIREITO -->
+        <section class="login-content">
+
+            <div class="login-card">
+
+                <h1>Bem-vindo</h1>
+
+                <p class="login-description">
+                    Acesse sua conta para entrar no NetNúcleo
+                </p>
+
+
+                              <form class="login-form">
+                <!-- Tipo de acesso -->
+                <div class="form-group">
+
+                    <label for="tipoUsuario">
+                        Tipo de acesso
+                    </label>
+
+                    <select id="tipoUsuario" name="tipoUsuario">
+
+                        <option value="administrador">
+                            Administrador
+                        </option>
+
+                        <option value="aluno">
+                            Aluno
+                        </option>
+
+                        <option value="instrutor">
+                            Instrutor
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="form-group">
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="seuemail@sisged.com"
+                    >
+
+                </div>
+
+
+                <!-- Senha -->
+                <div class="form-group">
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+                    <div class="password">
+
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Digite sua senha"
+                        >
+
+                        <button
+                            type="button"
+                            onclick="mostrarSenha()"
+                            class="eye"
+                        >
+                            ◉
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Entrar -->
+                <button
+                    type="submit"
+                    class="btn-login"
+                >
+                    Entrar no Sistema
+                </button>
+
+            </div>
+            
+        </form>
+
+        </section>
+
+    </main>
+
+    <script src="/js/db.js"></script>    
+    <script src="/js/script.js"></script>
+    <script src="/js/vlibras.js"></script>
+
+    <script src="/js/dark-mode.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Utilitários administrativos do NetNúcleo">
+    <meta name="author" content="Bárbara Rodrigues">
+    <meta name="language" content="pt-br">
+    <meta name="robots" content="index, follow">
+    <meta name="color-scheme" content="dark light">
+    <title>Utilitários | SISGED</title>
+
+    <link rel="stylesheet" href="/sisged-api/public/css/utilitarios.css">
+    <link rel="stylesheet" href="/sisged-api/public/css/base.css">
+    <link rel="icon" type="image/png" href="/sisged-api/public/img/favicon.jpg">
+
+</head>
+
+
+<body>
+
+    <header class="topbar">
+
+        <section class="logo-image">
+
+        <!-- Espaço reservado para imagem/identidade visual -->
+            <img src="/sisged-api/public/logo_senai.png" alt="logo" class="logo" >
+
+        </section>
+
+        <a href="dashboard.html" class="logo-link">
+
+            <strong>SISGED</strong>
+
+        </a>
+
+
+    <nav class="top-menu">
+
+        <a href="consultas.html">
+            Consulta
+        </a>
+
+        <a href="relatorios.html">
+            Relatório
+        </a>
+
+        <a href="perfil.html">
+                 Perfil
+            </a>
+
+        <a href="cadastro.html" >
+             Cadastro
+        </a>
+                
+        <a href="movimentacao.html" >
+             Movimentação
+        </a>
+
+        <a href="utilitarios.html" class="active">
+                Utilitários
+        </a>
+
+    </nav>
+
+
+    <div class="user-area">
+
+        <div class="user-info">
+
+            <strong>Usuário</strong>
+
+            <span>Administrador</span>
+
+        </div>
+
+        <div class="user-icon">
+            ♙
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<div class="page-container">
+
+
+    <!-- MENU LATERAL -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-title">
+            UTILITÁRIOS
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+
+            <button
+                class="util-menu"
+                data-util="parametros">
+
+                <span>⚙</span>
+
+                Parâmetros
+
+            </button>
+
+
+            <button
+                class="util-menu"
+                data-util="syslog">
+
+                <span>▤</span>
+
+                Syslog
+
+            </button>
+
+
+            <button
+                class="util-menu"
+                data-util="liberacao">
+
+                <span>♙</span>
+
+                Liberação de Usuários
+
+            </button>
+
+
+            <button
+                class="util-menu"
+                data-util="senha">
+
+                <span>🔑</span>
+
+                Troca de Senha
+
+            </button>
+
+
+            <button
+                class="util-menu"
+                data-util="telefonica">
+
+                <span>☎</span>
+
+                Lista Telefônica
+
+            </button>
+
+
+        </nav>
+
+
+        <div class="sidebar-divider"></div>
+
+
+    </aside>
+
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main class="main-content">
+
+
+        <section class="page-header">
+
+            <span class="breadcrumb">
+                Início › Utilitários
+            </span>
+
+
+            <h1>
+                Utilitários
+            </h1>
+
+
+            <p>
+                Gerencie configurações e recursos administrativos
+                do sistema.
+            </p>
+
+        </section>
+
+
+
+        <!-- ÁREA ÚNICA -->
+
+        <section
+            class="utilitarios-container"
+            id="areaUtilitarios">
+
+
+            <div class="empty-state">
+
+                <div class="empty-icon">
+                    ⚙
+                </div>
+
+
+                <h3>
+                    Selecione uma opção
+                </h3>
+
+
+                <p>
+                    Escolha uma opção no menu lateral
+                    para acessar os utilitários.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+    <script src="/js/db.js"></script>
+    <script src="/js/utilitarios.js"></script>
+    <script src="/js/vlibras.js"></script>
+
+    <script src="/js/dark-mode.js"></script>
+</body>
+
+</html>

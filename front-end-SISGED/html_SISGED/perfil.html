@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Perfil do usuário do NetNúcleo">
+
+    <title>Perfil | SISGED</title>
+
+    <link rel="stylesheet" href="/sisged-api/public/css/perfil.css">
+    <link rel="stylesheet" href="/sisged-api/public/css/base.css">
+    <link rel="icon" type="image/png" href="/sisged-api/public/img/favicon.jpg">
+
+</head>
+
+
+<body>
+
+    <header class="topbar">
+
+        <section class="logo-image">
+
+        <!-- Espaço reservado para imagem/identidade visual -->
+            <img src="/sisged-api/public/logo_senai.png" alt="logo" class="logo" >
+
+        </section>
+
+        <a href="dashboard.html" class="logo-link">
+
+            <strong>SISGED</strong>
+
+        </a>
+
+
+        <nav class="top-menu">
+
+            <a href="consultas.html">
+                Consulta
+            </a>
+
+            <a href="relatorios.html">
+                Relatório
+            </a>
+
+            <a href="perfil.html" class="active">
+                Perfil
+            </a>
+            
+
+            <a href="cadastro.html" >
+                Cadastro
+            </a>
+                
+            <a href="movimentacao.html" >
+                Movimentação
+            </a>
+
+            <a href="utilitarios.html" >
+                    Utilitários
+            </a>
+        </nav>
+
+
+        <div class="user-area">
+
+            <div class="user-info">
+
+                <strong id="nomeTopo">
+                    Usuário
+                </strong>
+
+                <span id="tipoTopo">
+                    Administrador
+                </span>
+
+            </div>
+
+            <div class="user-icon">
+                ♙
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <div class="page-container">
+
+
+
+        <!-- CONTEÚDO PRINCIPAL -->
+
+        <main class="main-content">
+
+
+            <section class="page-header">
+
+                <span class="breadcrumb">
+                    Início › Perfil
+                </span>
+
+
+                <h1>
+                    Meu Perfil
+                </h1>
+
+
+                <p>
+                    Consulte as informações da sua conta.
+                </p>
+
+            </section>
+
+
+
+            <!-- PERFIL -->
+
+            <section class="profile-container">
+
+
+                <!-- CABEÇALHO DO PERFIL -->
+
+                <div class="profile-header">
+
+
+                    <div class="profile-avatar">
+
+                        <span id="avatar">
+                            U
+                        </span>
+
+                    </div>
+
+
+                    <div class="profile-name">
+
+                        <h2 id="nomeUsuario">
+                            Usuário
+                        </h2>
+
+                        <p id="cargoUsuario">
+                        
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- INFORMAÇÕES -->
+
+                <div class="profile-section">
+
+                    <h3>
+                        Informações pessoais
+                    </h3>
+
+
+                    <div class="info-grid">
+
+
+                        <div class="info-item">
+
+                            <span class="info-label">
+                                Nome completo
+                            </span>
+
+                            <strong id="nome">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span class="info-label">
+                                Usuário institucional
+                            </span>
+
+                            <strong id="usuario">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span class="info-label">
+                                E-mail
+                            </span>
+
+                            <strong id="email">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span class="info-label">
+                                Telefone
+                            </span>
+
+                            <strong id="telefone">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- INFORMAÇÕES DA CONTA -->
+
+                <div class="profile-section">
+
+                    <h3>
+                        Informações da conta
+                    </h3>
+
+
+                    <div class="info-grid">
+
+
+                        <div class="info-item">
+
+                            <span class="info-label">
+                                Tipo de usuário
+                            </span>
+
+                            <strong id="tipoUsuario">
+                                Administrador
+                            </strong>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span class="info-label">
+                                Unidade
+                            </span>
+
+                            <strong id="unidade">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span class="info-label">
+                                Status
+                            </span>
+
+                            <span class="status ativo">
+                                Ativo
+                            </span>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span class="info-label">
+                                Último acesso
+                            </span>
+
+                            <strong id="ultimoAcesso">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- AÇÕES -->
+
+                <div class="profile-actions">
+
+                    <a href="login.html"
+                    class="btn-sair">
+
+                        Sair da conta
+
+                    </a>
+
+                </div>
+
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="/js/db.js"></script>
+    <script src="/js/perfil.js"></script>
+    <script src="/js/vlibras.js"></script>
+
+    <script src="/js/dark-mode.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Troca de senha obrigatória - SISGED">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="color-scheme" content="dark light">
+
+    <link rel="stylesheet" href="/sisged-api/public/css/login.css">
+    <link rel="icon" type="image/png" href="/sisged-api/public/img/favicon.jpg">
+
+    <title>Trocar senha | SISGED</title>
+</head>
+<body>
+    <main class="login-container">
+
+        <section class="login-image">
+            <img src="/login-bg.png">
+        </section>
+
+        <section class="login-content">
+
+            <div class="login-card">
+
+                <h1>Troque sua senha</h1>
+
+                <p class="login-description">
+                    Este é o seu primeiro acesso. Por segurança, defina uma
+                    nova senha antes de continuar usando o sistema.
+                </p>
+
+                <form class="login-form" id="formTrocarSenha">
+
+                    <div class="form-group">
+                        <label for="senhaAtual">Senha atual (a padrão que você recebeu)</label>
+                        <input type="password" id="senhaAtual" name="senhaAtual" placeholder="Digite a senha padrão">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="novaSenha">Nova senha</label>
+                        <input type="password" id="novaSenha" name="novaSenha" placeholder="Mínimo de 8 caracteres">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmarSenha">Confirme a nova senha</label>
+                        <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Repita a nova senha">
+                    </div>
+
+                    <button type="submit" class="btn-login">
+                        Trocar senha e continuar
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="/js/db.js"></script>
+    <script src="/js/trocar-senha.js"></script>
+    <script src="/js/dark-mode.js"></script>
+</body>
+</html>
