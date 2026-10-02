@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de relatórios do sistema NetNúcleo">
+    <meta name="author" content="Bárbara Rodrigues">
+    <meta name="language" content="pt-br">
+    <meta name="robots" content="index, follow">
+    <meta name="color-scheme" content="dark light">
+
+     <link rel="stylesheet" href="css/relatorios.css">
+     <link rel="stylesheet" href="css/base.css">
+     <link rel="icon" type="image/png" href="img/SENAI_logo_2024.png">
+   
+    <title>Relatórios | SISGED</title>
+    
+        <link rel="stylesheet" href="css/sem-js.css">
+    <style>
+.rel-res { display:none; }
+body:has(#tipo-relatorio option[value="1"]:checked) #rel-1 { display:block; }
+body:has(#tipo-relatorio option[value="2"]:checked) #rel-2 { display:block; }
+body:has(#tipo-relatorio option[value="3"]:checked) #rel-3 { display:block; }
+body:has(#tipo-relatorio option[value="4"]:checked) #rel-4 { display:block; }
+body:has(#tipo-relatorio option:checked:not([value=""])) .rel-vazio { display:none; }
+body:has(#turma option[value="DW-2026/1"]:checked) .relatorio-tabela tbody tr:not([data-t="DW-2026/1"]) { display:none; }
+body:has(#turma option[value="GP-2026/1"]:checked) .relatorio-tabela tbody tr:not([data-t="GP-2026/1"]) { display:none; }
+    </style>
+</head>
+    <body>
+        <!-- CABEÇALHO -->
+        <header class="topbar">
+
+        <section class="logo-image">
+
+        <!-- Espaço reservado para imagem/identidade visual -->
+            <img src="img/logo_senai.png" alt="logo" class="logo" >
+
+        </section>
+
+        <a href="dashboard.html" class="logo-link">
+
+            <strong>SISGED</strong>
+
+        </a>
+            <!-- MENU SUPERIOR -->
+        <nav class="top-menu">
+
+            <a href="consultas.html" >
+                Consulta
+            </a>
+
+            <a href="relatorios.html" class="active">
+                Relatório
+            </a>
+
+            <a href="perfil.html">
+                 Perfil
+            </a>
+
+            <a href="cadastro.html" >
+                Cadastro
+            </a>
+                    
+            <a href="movimentacao.html" >
+                Movimentação
+            </a>
+
+            <a href="utilitarios.html" >
+                    Utilitários
+            </a>
+
+        </nav>
+
+
+            <!-- USUÁRIO -->
+            <div class="user-area">
+
+                <div class="user-info">
+                    <strong>admin</strong>
+                    <span>Administrador</span>
+                </div>
+
+                <div class="user-icon">
+                    ♙
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTEÚDO -->
+        <main class="main-content">
+
+            <!-- TÍTULO -->
+            <section class="page-header">
+
+                <h1>Relatórios Pedagógicos</h1>
+
+                <p>
+                    Consulte e gere relatórios pedagógicos da sua instituição.
+                </p>
+
+            </section>
+
+
+            <!-- ÁREA DE FILTROS -->
+            <form class="report-filters">
+
+
+                <!-- TIPO DE RELATÓRIO -->
+                <div class="form-group">
+
+                    <label for="tipo-relatorio">
+                        Tipo de Relatório
+                    </label>
+
+                    <select id="tipo-relatorio" name="tipo-relatorio">
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        
+
+                    <option value="1">Frequência por turma</option><option value="2">Desempenho por aluno</option><option value="3">Ocorrências</option><option value="4">Programação de turmas</option></select>
+
+                </div>
+
+
+                <!-- ALUNO -->
+                
+
+
+                <!-- TURMA -->
+                <div class="form-group">
+
+                    <label for="turma">
+                        Turma
+                    </label>
+
+                    <select id="turma" name="turma">
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        
+
+                    <option value="DW-2026/1">DW-2026/1</option><option value="GP-2026/1">GP-2026/1</option></select>
+
+                </div>
+
+
+                <!-- DISCIPLINA -->
+                <div class="form-group">
+
+                    <label for="disciplina">
+                        Disciplina
+                    </label>
+
+                    <select id="disciplina" name="disciplina">
+
+                        <option value="">
+                            Todas as Disciplinas
+                        </option>
+
+                        
+
+                    <option value="HTML e CSS">HTML e CSS</option><option value="JavaScript">JavaScript</option><option value="Gestão Ágil">Gestão Ágil</option></select>
+
+                </div>
+
+
+                <!-- PERÍODO -->
+                <div class="form-group">
+
+                    <label for="periodo">
+                        Período
+                    </label>
+
+                    <select id="periodo" name="periodo">
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        
+
+                    <option value="1º Bimestre">1º Bimestre</option><option value="2º Bimestre">2º Bimestre</option><option value="3º Bimestre">3º Bimestre</option><option value="4º Bimestre">4º Bimestre</option></select>
+
+                </div>
+
+
+                <!-- BOTÕES -->
+                <div class="actions"><button type="reset" class="clear-button">Limpar Filtros</button></div>
+
+            </form>
+
+
+            <!-- RESULTADO -->
+            <section class="report-result"><div class="rel-vazio"><div class="result-icon">││</div><h2>Nenhum relatório gerado</h2><p>Escolha um tipo de relatório nos filtros acima para visualizar os resultados.</p></div><div class="rel-res" id="rel-1"><h2>Frequência por turma</h2><table class="relatorio-tabela"><thead><tr><th>Matrícula</th><th>Aluno</th><th>Turma</th></tr></thead><tbody><tr data-t="DW-2026/1"><td>2026001</td><td>Ana Beatriz Souza</td><td>DW-2026/1</td></tr><tr data-t="GP-2026/1"><td>2026002</td><td>João Pedro Martins</td><td>GP-2026/1</td></tr><tr data-t="DW-2026/1"><td>2026003</td><td>Larissa Costa</td><td>DW-2026/1</td></tr></tbody></table></div><div class="rel-res" id="rel-2"><h2>Desempenho por aluno</h2><table class="relatorio-tabela"><thead><tr><th>Matrícula</th><th>Aluno</th><th>Turma</th></tr></thead><tbody><tr data-t="DW-2026/1"><td>2026001</td><td>Ana Beatriz Souza</td><td>DW-2026/1</td></tr><tr data-t="GP-2026/1"><td>2026002</td><td>João Pedro Martins</td><td>GP-2026/1</td></tr><tr data-t="DW-2026/1"><td>2026003</td><td>Larissa Costa</td><td>DW-2026/1</td></tr></tbody></table></div><div class="rel-res" id="rel-3"><h2>Ocorrências</h2><table class="relatorio-tabela"><thead><tr><th>Matrícula</th><th>Aluno</th><th>Turma</th></tr></thead><tbody><tr data-t="DW-2026/1"><td>2026001</td><td>Ana Beatriz Souza</td><td>DW-2026/1</td></tr><tr data-t="GP-2026/1"><td>2026002</td><td>João Pedro Martins</td><td>GP-2026/1</td></tr><tr data-t="DW-2026/1"><td>2026003</td><td>Larissa Costa</td><td>DW-2026/1</td></tr></tbody></table></div><div class="rel-res" id="rel-4"><h2>Programação de turmas</h2><table class="relatorio-tabela"><thead><tr><th>Matrícula</th><th>Aluno</th><th>Turma</th></tr></thead><tbody><tr data-t="DW-2026/1"><td>2026001</td><td>Ana Beatriz Souza</td><td>DW-2026/1</td></tr><tr data-t="GP-2026/1"><td>2026002</td><td>João Pedro Martins</td><td>GP-2026/1</td></tr><tr data-t="DW-2026/1"><td>2026003</td><td>Larissa Costa</td><td>DW-2026/1</td></tr></tbody></table></div></section>
+
+        </main>
+
+    </body>
+</html>

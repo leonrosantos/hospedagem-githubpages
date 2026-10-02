@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Utilitários administrativos do NetNúcleo">
+    <meta name="author" content="Bárbara Rodrigues">
+    <meta name="language" content="pt-br">
+    <meta name="robots" content="index, follow">
+    <meta name="color-scheme" content="dark light">
+    <title>Utilitários | SISGED</title>
+
+    <link rel="stylesheet" href="css/utilitarios.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="icon" type="image/png" href="img/SENAI_logo_2024.png">
+
+    <link rel="stylesheet" href="css/sem-js.css">
+    <style>
+body:has(#menu-parametros:checked) label[for="menu-parametros"] { background:#e7f0ff; color:#003bd1; font-weight:600; border-left:3px solid #003bd1; padding-left:7px; }
+body:has(#menu-parametros:checked) label[for="menu-parametros"] span { color:#003bd1; }
+body:has(#menu-parametros:checked) #painel-parametros { display:block; }
+body:has(#menu-syslog:checked) label[for="menu-syslog"] { background:#e7f0ff; color:#003bd1; font-weight:600; border-left:3px solid #003bd1; padding-left:7px; }
+body:has(#menu-syslog:checked) label[for="menu-syslog"] span { color:#003bd1; }
+body:has(#menu-syslog:checked) #painel-syslog { display:block; }
+body:has(#menu-liberacao:checked) label[for="menu-liberacao"] { background:#e7f0ff; color:#003bd1; font-weight:600; border-left:3px solid #003bd1; padding-left:7px; }
+body:has(#menu-liberacao:checked) label[for="menu-liberacao"] span { color:#003bd1; }
+body:has(#menu-liberacao:checked) #painel-liberacao { display:block; }
+body:has(#menu-senha:checked) label[for="menu-senha"] { background:#e7f0ff; color:#003bd1; font-weight:600; border-left:3px solid #003bd1; padding-left:7px; }
+body:has(#menu-senha:checked) label[for="menu-senha"] span { color:#003bd1; }
+body:has(#menu-senha:checked) #painel-senha { display:block; }
+body:has(#menu-telefonica:checked) label[for="menu-telefonica"] { background:#e7f0ff; color:#003bd1; font-weight:600; border-left:3px solid #003bd1; padding-left:7px; }
+body:has(#menu-telefonica:checked) label[for="menu-telefonica"] span { color:#003bd1; }
+body:has(#menu-telefonica:checked) #painel-telefonica { display:block; }
+    </style>
+</head>
+
+
+<body>
+
+    <header class="topbar">
+
+        <section class="logo-image">
+
+        <!-- Espaço reservado para imagem/identidade visual -->
+            <img src="img/logo_senai.png" alt="logo" class="logo" >
+
+        </section>
+
+        <a href="dashboard.html" class="logo-link">
+
+            <strong>SISGED</strong>
+
+        </a>
+
+
+    <nav class="top-menu">
+
+        <a href="consultas.html">
+            Consulta
+        </a>
+
+        <a href="relatorios.html">
+            Relatório
+        </a>
+
+        <a href="perfil.html">
+                 Perfil
+            </a>
+
+        <a href="cadastro.html" >
+             Cadastro
+        </a>
+                
+        <a href="movimentacao.html" >
+             Movimentação
+        </a>
+
+        <a href="utilitarios.html" class="active">
+                Utilitários
+        </a>
+
+    </nav>
+
+
+    <div class="user-area">
+
+        <div class="user-info">
+
+            <strong>Usuário</strong>
+
+            <span>Administrador</span>
+
+        </div>
+
+        <div class="user-icon">
+            ♙
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<div class="page-container">
+
+
+    <!-- MENU LATERAL -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-title">
+            UTILITÁRIOS
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+
+            <input type="radio" name="menu" id="menu-parametros" class="menu-radio">
+<label for="menu-parametros" class="util-menu"><span>⚙</span> Parâmetros</label>
+
+
+            <input type="radio" name="menu" id="menu-syslog" class="menu-radio">
+<label for="menu-syslog" class="util-menu"><span>▤</span> Syslog</label>
+
+
+            <input type="radio" name="menu" id="menu-liberacao" class="menu-radio">
+<label for="menu-liberacao" class="util-menu"><span>♙</span> Liberação de Usuários</label>
+
+
+            <input type="radio" name="menu" id="menu-senha" class="menu-radio">
+<label for="menu-senha" class="util-menu"><span>🔑</span> Troca de Senha</label>
+
+
+            <input type="radio" name="menu" id="menu-telefonica" class="menu-radio">
+<label for="menu-telefonica" class="util-menu"><span>☎</span> Lista Telefônica</label>
+
+
+        </nav>
+
+
+        <div class="sidebar-divider"></div>
+
+
+    </aside>
+
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main class="main-content">
+
+
+        <section class="page-header">
+
+            <span class="breadcrumb">
+                Início › Utilitários
+            </span>
+
+
+            <h1>
+                Utilitários
+            </h1>
+
+
+            <p>
+                Gerencie configurações e recursos administrativos
+                do sistema.
+            </p>
+
+        </section>
+
+
+
+        <!-- ÁREA ÚNICA -->
+
+        <section
+            class="utilitarios-container"
+            id="areaUtilitarios">
+
+
+            <div class="empty-state">
+
+                <div class="empty-icon">
+                    ⚙
+                </div>
+
+
+                <h3>
+                    Selecione uma opção
+                </h3>
+
+
+                <p>
+                    Escolha uma opção no menu lateral
+                    para acessar os utilitários.
+                </p>
+
+            </div>
+
+        
+<div class="painel" id="painel-parametros"><h2>Parâmetros do Sistema</h2><p class="aviso-sem-js">Esta versão não usa JavaScript, por isso este formulário é só ilustrativo: não salva dados.</p><form class="util-form"><div class="form-group"><label>Nome do sistema</label><input type="text" value="NetNúcleo" disabled></div><div class="form-group"><label>Tempo de sessão (minutos)</label><input type="number" value="30" disabled></div><button type="button" class="btn-salvar" disabled>Salvar parâmetros</button></form></div>
+<div class="painel" id="painel-syslog"><h2>Syslog</h2><table class="util-tabela"><thead><tr><th>Data</th><th>Usuário</th><th>Ação</th></tr></thead><tbody><tr><td>2026-08-20 08:12</td><td>carlos.andrade</td><td>Login realizado</td></tr>
+<tr><td>2026-08-20 09:45</td><td>fernanda.lima</td><td>Cadastro de turma criado</td></tr>
+<tr><td>2026-08-19 17:30</td><td>rodrigo.souza</td><td>Relatório exportado</td></tr></tbody></table></div>
+<div class="painel" id="painel-liberacao"><h2>Liberação de Usuários</h2><table class="util-tabela"><thead><tr><th>Usuário</th><th>Situação</th></tr></thead><tbody><tr><td>joao.martins</td><td>Aguardando liberação</td></tr>
+<tr><td>larissa.costa</td><td>Aguardando liberação</td></tr></tbody></table></div>
+<div class="painel" id="painel-senha"><h2>Troca de Senha</h2><p class="aviso-sem-js">Esta versão não usa JavaScript, por isso este formulário é só ilustrativo: não salva dados.</p><form class="util-form"><div class="form-group"><label>Senha atual</label><input type="password" disabled></div><div class="form-group"><label>Nova senha</label><input type="password" disabled></div><div class="form-group"><label>Confirmar nova senha</label><input type="password" disabled></div><button type="button" class="btn-salvar" disabled>Alterar senha</button></form></div>
+<div class="painel" id="painel-telefonica"><h2>Lista Telefônica</h2><table class="util-tabela"><thead><tr><th>Nome</th><th>Ramal</th></tr></thead><tbody><tr><td>Secretaria</td><td>1001</td></tr>
+<tr><td>Coordenação Pedagógica</td><td>1002</td></tr>
+<tr><td>TI / Suporte</td><td>1003</td></tr></tbody></table></div></section>
+
+    </main>
+
+</div>
+
+    </body>
+
+</html>
